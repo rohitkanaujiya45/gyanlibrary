@@ -1,0 +1,25 @@
+<div class="plan-card">
+  <div class="plan-header">
+    <h3 class="plan-name">{{ plan.name }}</h3>
+    <div class="plan-price">{{ plan.price }}</div>
+    <div class="plan-duration">{{ plan.duration }}</div>
+  </div>
+  
+  <div class="plan-body">
+    <div class="timing-info">
+      <span class="material-icons">schedule</span>
+      <span>{{ plan.timing }}</span>
+    </div>
+    
+    <ul class="feature-list">
+      <li *ngFor="let feature of plan.features">
+        <span class="material-icons check-icon">check_circle</span>
+        {{ feature }}
+      </li>
+    </ul>
+  </div>
+  
+  <div class="plan-footer">
+    <a routerLink="/contact" class="btn btn-primary w-100">Enquire Now</a>
+  </div>
+</div>

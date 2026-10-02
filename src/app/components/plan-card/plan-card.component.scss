@@ -1,0 +1,89 @@
+.plan-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.plan-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.plan-name {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 5px;
+  color: var(--accent-color);
+}
+
+.plan-duration {
+  font-size: 0.9rem;
+  color: #cbd5e0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-body {
+  padding: 30px 20px;
+  flex: 1;
+}
+
+.timing-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--border-color);
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  
+  .material-icons {
+    color: var(--accent-color);
+  }
+}
+
+.feature-list {
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    
+    .check-icon {
+      color: var(--success-color);
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+  }
+}
+
+.plan-footer {
+  padding: 0 20px 30px;
+}
+
+.w-100 {
+  width: 100%;
+}

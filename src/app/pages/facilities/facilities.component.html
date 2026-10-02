@@ -1,0 +1,10 @@
+<div class="section facilities-page">
+  <div class="container">
+    <h1 class="section-title">Our Premium Facilities</h1>
+    <p class="section-subtitle">Everything you need for a comfortable, uninterrupted, and highly productive study session.</p>
+    
+    <div class="facilities-grid">
+      <app-facility-card *ngFor="let item of facilityList" [facility]="item"></app-facility-card>
+    </div>
+  </div>
+</div>

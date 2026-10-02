@@ -1,0 +1,7 @@
+<div class="seat" [ngClass]="seat.status">
+  <div class="seat-top"></div>
+  <div class="seat-body">
+    <span class="seat-number">{{ seat.id < 10 ? '0' + seat.id : seat.id }}</span>
+  </div>
+  <div class="seat-status-label">{{ seat.status | titlecase }}</div>
+</div>

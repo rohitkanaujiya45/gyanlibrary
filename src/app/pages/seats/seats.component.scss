@@ -1,0 +1,174 @@
+.seats-section {
+  background-color: var(--background-color);
+}
+
+.status-legend-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 40px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  background: var(--background-color);
+  
+  .stat-num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  &.available .stat-num { color: var(--success-color); }
+  &.occupied .stat-num { color: var(--danger-color); }
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  
+  .indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    
+    &.available { background-color: var(--success-color); }
+    &.occupied { background-color: var(--danger-color); }
+  }
+}
+
+.room-layout {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 20px;
+  background: white;
+  padding: 40px 30px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.seating-area {
+  .area-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 15px;
+}
+
+.aisle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-color);
+}
+
+.aisle-path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-light);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  gap: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  
+  .material-icons {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .room-layout {
+    grid-template-columns: 1fr 60px 1fr;
+    padding: 20px 15px;
+    gap: 10px;
+  }
+  
+  .seats-grid {
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .status-legend-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .stats {
+    justify-content: space-between;
+  }
+  
+  .legend {
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .room-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aisle {
+    padding: 20px 0;
+    margin: 10px 0;
+  }
+  
+  .aisle-path {
+    writing-mode: horizontal-tb;
+    transform: none;
+    flex-direction: row;
+    
+    .material-icons {
+      transform: none;
+    }
+  }
+}

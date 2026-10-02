@@ -1,0 +1,10 @@
+<div class="section plans-page">
+  <div class="container">
+    <h1 class="section-title">Membership Plans</h1>
+    <p class="section-subtitle">Choose an affordable plan that perfectly fits your study schedule.</p>
+    
+    <div class="plans-grid">
+      <app-plan-card *ngFor="let plan of planList" [plan]="plan"></app-plan-card>
+    </div>
+  </div>
+</div>

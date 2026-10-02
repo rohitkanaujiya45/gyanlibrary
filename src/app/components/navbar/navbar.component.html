@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="container navbar-container">
+    <a routerLink="/" class="logo" (click)="closeMenu()">
+      <span class="material-icons">local_library</span>
+      {{ libraryName }}
+    </a>
+
+    <div class="hamburger" (click)="toggleMenu()" [class.active]="isMobileMenuOpen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="nav-menu" [class.active]="isMobileMenuOpen">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" (click)="closeMenu()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeMenu()">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/facilities" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Facilities</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/plans" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Plans</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/seats" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Seats</a>
+      </li>
+      <li class="nav-item cta-item">
+        <a routerLink="/contact" class="btn btn-primary" (click)="closeMenu()">Enquire Now</a>
+      </li>
+    </ul>
+  </div>
+</nav>

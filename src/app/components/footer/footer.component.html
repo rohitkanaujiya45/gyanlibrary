@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3>
+        <span class="material-icons" style="vertical-align: middle; margin-right: 5px;">local_library</span>
+        {{ info.name }}
+      </h3>
+      <p class="footer-tagline"><strong>{{ info.tagline }}</strong></p>
+      <p class="footer-desc mt-2">
+        A premium, peaceful, and fully-equipped study environment dedicated to helping students and professionals achieve their goals without distractions.
+      </p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/facilities">Facilities</a></li>
+        <li><a routerLink="/plans">Plans</a></li>
+        <li><a routerLink="/seats">Seats</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>
+          <span class="material-icons">phone</span> {{ info.phone }}
+        </li>
+        <li>
+          <span class="material-icons">email</span> {{ info.email }}
+        </li>
+        <li>
+          <span class="material-icons">location_on</span> {{ info.address }}
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p><span class="material-icons" style="vertical-align: middle; margin-right: 5px;">schedule</span> {{ info.openingHours }}</p>
+      <p>Monday - Sunday</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom-container">
+    <div class="container footer-bottom">
+      <p>&copy; {{ year }} {{ info.name }}. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="#" class="social-icon" title="Facebook"><span class="material-icons">facebook</span></a>
+        <a href="#" class="social-icon" title="Instagram"><span class="material-icons">camera_alt</span></a>
+        <a href="#" class="social-icon" title="Twitter"><span class="material-icons">flutter_dash</span></a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,12 @@
+<div class="section gallery-section">
+  <div class="container">
+    <h2 class="section-title">Our Gallery</h2>
+    <p class="section-subtitle">Take a look inside our peaceful study environment.</p>
+    
+    <div class="gallery-collage">
+      <div *ngFor="let img of images" class="gallery-item">
+        <img [src]="img" alt="Gallery Image">
+      </div>
+    </div>
+  </div>
+</div>

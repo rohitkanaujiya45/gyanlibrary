@@ -1,0 +1,41 @@
+.facility-card {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  height: 100%;
+  border: 1px solid var(--border-color);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+  }
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(56, 178, 172, 0.1);
+  margin-bottom: 20px;
+  
+  .material-icons {
+    font-size: 2rem;
+    color: var(--accent-color);
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}

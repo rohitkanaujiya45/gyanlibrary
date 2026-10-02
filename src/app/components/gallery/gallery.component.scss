@@ -1,0 +1,39 @@
+.gallery-section {
+  background-color: var(--background-color);
+  padding: 60px 0;
+}
+
+.gallery-collage {
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  
+  img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-collage {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-collage {
+    column-count: 1;
+  }
+}

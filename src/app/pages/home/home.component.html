@@ -1,0 +1,113 @@
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">A Better Place to Study.</h1>
+      <p class="hero-subtitle">A peaceful, comfortable and focused study space designed for students who want to achieve more.</p>
+      
+      <div class="hero-actions">
+        <a routerLink="/seats" class="btn btn-primary">View Seats</a>
+        <a routerLink="/facilities" class="btn btn-secondary">Explore Facilities</a>
+        <a routerLink="/contact" class="btn btn-accent">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why Choose Us / Quick Facilities -->
+<div class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">Why Choose {{ libraryInfo.name }}</h2>
+    <p class="section-subtitle">We provide the perfect environment so you can focus entirely on your goals.</p>
+    
+    <div class="grid preview-grid">
+      <app-facility-card *ngFor="let facility of facilitiesPreview" [facility]="facility"></app-facility-card>
+    </div>
+    
+    <div class="text-center mt-4">
+      <a routerLink="/facilities" class="btn btn-secondary">View All Facilities</a>
+    </div>
+  </div>
+</div>
+
+<!-- Seat Availability Preview -->
+<div class="section availability-section">
+  <div class="container">
+    <div class="availability-card">
+      <div class="availability-info">
+        <h2>Check Seat Availability</h2>
+        <p>Planning to drop by? Check our current seating status in real-time.</p>
+      </div>
+      
+      <div class="availability-stats">
+        <div class="stat available">
+          <span class="num">{{ availableSeats }}</span>
+          <span class="label">Available</span>
+        </div>
+        <div class="stat occupied">
+          <span class="num">{{ occupiedSeats }}</span>
+          <span class="label">Occupied</span>
+        </div>
+      </div>
+      
+      <div class="availability-action">
+        <a routerLink="/seats" class="btn btn-primary">View Full Layout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Plans Preview -->
+<div class="section">
+  <div class="container">
+    <h2 class="section-title">Membership Plans</h2>
+    <p class="section-subtitle">Flexible plans to suit your study routine.</p>
+    
+    <div class="grid preview-grid">
+      <app-plan-card *ngFor="let plan of plansPreview" [plan]="plan"></app-plan-card>
+    </div>
+    
+    <div class="text-center mt-4">
+      <a routerLink="/plans" class="btn btn-secondary">View All Plans</a>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<app-gallery></app-gallery>
+
+<!-- Location & Contact -->
+<div class="section bg-light">
+  <div class="container">
+    <div class="location-card">
+      <div class="location-details">
+        <h2>Visit Us</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="material-icons">location_on</span>
+            {{ libraryInfo.address }}
+          </li>
+          <li>
+            <span class="material-icons">phone</span>
+            {{ libraryInfo.phone }}
+          </li>
+          <li>
+            <span class="material-icons">email</span>
+            {{ libraryInfo.email }}
+          </li>
+          <li>
+            <span class="material-icons">schedule</span>
+            {{ libraryInfo.openingHours }}
+          </li>
+        </ul>
+        <a [href]="libraryInfo.mapUrl" target="_blank" class="btn btn-primary mt-3">Get Directions</a>
+      </div>
+      
+      <div class="location-visual">
+        <div class="map-image-wrapper">
+          <img src="assets/achievements-bg.jpg" alt="Library Location">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

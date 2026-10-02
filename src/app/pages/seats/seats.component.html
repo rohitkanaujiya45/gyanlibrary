@@ -1,0 +1,60 @@
+<div class="section seats-section">
+  <div class="container">
+    <h2 class="section-title">Study Area Layout</h2>
+    <p class="section-subtitle">Real-time seat availability for your focused study sessions.</p>
+    
+    <div class="status-legend-container">
+      <div class="stats">
+        <div class="stat-box">
+          <span class="stat-num">{{ totalCount }}</span>
+          <span class="stat-label">Total Seats</span>
+        </div>
+        <div class="stat-box available">
+          <span class="stat-num">{{ availableCount }}</span>
+          <span class="stat-label">Available</span>
+        </div>
+        <div class="stat-box occupied">
+          <span class="stat-num">{{ occupiedCount }}</span>
+          <span class="stat-label">Occupied</span>
+        </div>
+      </div>
+      
+      <div class="legend">
+        <div class="legend-item">
+          <span class="indicator available"></span>
+          <span>Available</span>
+        </div>
+        <div class="legend-item">
+          <span class="indicator occupied"></span>
+          <span>Occupied</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="room-layout">
+      <!-- Left Side -->
+      <div class="seating-area">
+        <h3 class="area-title">Left Wing</h3>
+        <div class="seats-grid">
+          <app-seat-card *ngFor="let seat of leftSeats" [seat]="seat"></app-seat-card>
+        </div>
+      </div>
+      
+      <!-- Central Aisle -->
+      <div class="aisle">
+        <div class="aisle-path">
+          <span class="material-icons">directions_walk</span>
+          <span>Central Walking Aisle</span>
+        </div>
+      </div>
+      
+      <!-- Right Side -->
+      <div class="seating-area">
+        <h3 class="area-title">Right Wing</h3>
+        <div class="seats-grid">
+          <app-seat-card *ngFor="let seat of rightSeats" [seat]="seat"></app-seat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
