@@ -1,6 +1,7 @@
 .hero-section {
   background-color: var(--primary-color);
-  background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('/assets/banner_3.jpg');
+  /* Uniform, slightly lighter overlay so the image is visible but text remains readable */
+  background-image: linear-gradient(rgba(26, 54, 93, 0.65), rgba(26, 54, 93, 0.65)), url('/assets/banner_3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -8,12 +9,17 @@
   min-height: 91vh;
   display: flex;
   align-items: center;
+  
+  .hero-container {
+    display: flex;
+    justify-content: center; /* Centered content is more balanced */
+    width: 100%;
+  }
 }
 
 .hero-content {
   max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  text-align: center; /* Center aligned text */
 }
 
 .hero-title {
@@ -32,7 +38,7 @@
 .hero-actions {
   display: flex;
   gap: 15px;
-  justify-content: center;
+  justify-content: center; /* Restore centered buttons */
   flex-wrap: wrap;
 }
 
@@ -168,22 +174,81 @@
   }
 }
 
-@media (max-width: 900px) {
-  .hero-title {
-    font-size: 3rem;
+@media (max-width: 992px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(26, 54, 93, 0.4), rgba(26, 54, 93, 0.8)), url('/assets/banner_3.jpg');
+    padding: 100px 0 80px;
+    min-height: 70vh;
+    
+    .hero-container {
+      justify-content: center;
+    }
+  }
+  
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%;
   }
 
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  
   .availability-card {
     flex-direction: column;
     text-align: center;
+    padding: 30px 20px; /* Reduce padding on tablet */
+    gap: 20px; /* Ensure there is a gap when stacked vertically */
   }
-
+  
+  .availability-info {
+    margin-bottom: 10px;
+  }
+  
+  .availability-stats {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
   .location-card {
     grid-template-columns: 1fr;
   }
-
+  
   .location-visual {
     height: 300px;
     min-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(26, 54, 93, 0.6), rgba(26, 54, 93, 0.9)), url('/assets/banner_3.jpg');
+    padding: 80px 0 60px;
+    min-height: 60vh;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .availability-stats {
+    flex-direction: column; /* Stack the stats on very small screens */
+    gap: 15px;
+    
+    .stat {
+      width: 100%;
+    }
   }
 }
