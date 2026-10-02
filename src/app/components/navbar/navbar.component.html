@@ -1,8 +1,7 @@
 <nav class="navbar">
   <div class="container navbar-container">
-    <a routerLink="/" class="logo" (click)="closeMenu()">
-      <span class="material-icons">local_library</span>
-      {{ libraryName }}
+    <a routerLink="/" class="logo-link" (click)="closeMenu()">
+      <img src="assets/logo/logogyan.png" alt="{{ libraryName }} Logo" class="brand-logo">
     </a>
 
     <div class="hamburger" (click)="toggleMenu()" [class.active]="isMobileMenuOpen">

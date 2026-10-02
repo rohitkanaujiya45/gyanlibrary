@@ -4,7 +4,7 @@
     <p class="section-subtitle">Take a look inside our peaceful study environment.</p>
     
     <div class="gallery-collage">
-      <div *ngFor="let img of images" class="gallery-item">
+      <div *ngFor="let img of images; let i = index" class="gallery-item item-{{i}}">
         <img [src]="img" alt="Gallery Image">
       </div>
     </div>
