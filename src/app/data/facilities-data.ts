@@ -34,7 +34,7 @@ export const facilities: Facility[] = [
     id: 'environment',
     title: 'Peaceful Environment',
     description: 'A strict noise-free zone, giving you the perfect calm atmosphere to concentrate.',
-    icon: 'silence'
+    icon: 'volume_off' // Changed from 'silence'
   },
   {
     id: 'security',
@@ -46,12 +46,12 @@ export const facilities: Facility[] = [
     id: 'water',
     title: 'Drinking Water',
     description: 'RO purified drinking water available at all times.',
-    icon: 'water'
+    icon: 'local_drink' // Changed from 'water' to 'local_drink'
   },
   {
     id: 'hours',
     title: 'Long Study Hours',
     description: 'Open early morning to late night, accommodating all types of study schedules.',
-    icon: 'clock'
+    icon: 'schedule' // Changed from 'clock'
   }
 ];
