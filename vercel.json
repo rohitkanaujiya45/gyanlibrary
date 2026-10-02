@@ -1,0 +1,9 @@
+{
+    "outputDirectory": "dist/gyanlibrary/browser",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
