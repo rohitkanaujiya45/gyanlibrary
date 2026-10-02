@@ -9,43 +9,43 @@ export interface Plan {
 
 export const plans: Plan[] = [
   {
-    id: 'daily',
-    name: 'Daily Pass',
-    price: '₹ 100',
-    duration: '1 Day',
-    timing: '6:00 AM - 11:00 PM',
+    id: 'half-day',
+    name: 'Half Day Plan',
+    price: '₹ 400',
+    duration: '1 Month',
+    timing: 'Half Day Shift',
     features: [
-      'Access to a comfortable study seat',
-      'High-speed Wi-Fi',
-      'Charging points at desk',
+      'Reserved study seat',
+      'High-speed Wi-Fi access',
+      'Peaceful environment',
       'Drinking water facility'
     ]
   },
   {
-    id: 'weekly',
-    name: 'Weekly Pass',
-    price: '₹ 500',
-    duration: '7 Days',
+    id: 'full-day',
+    name: 'Full Day Plan',
+    price: '₹ 700',
+    duration: '1 Month',
     timing: '6:00 AM - 11:00 PM',
     features: [
       'Reserved study seat',
       'High-speed Wi-Fi access',
       'Locker facility (subject to availability)',
-      'Discussion room access (1 hour/day)'
+      'Discussion room access'
     ]
   },
   {
-    id: 'monthly-standard',
-    name: 'Monthly Standard',
-    price: '₹ 1500',
-    duration: '30 Days',
+    id: 'quarterly',
+    name: '3 Months Plan',
+    price: '₹ 1800',
+    duration: '3 Months',
     timing: '6:00 AM - 11:00 PM',
     features: [
       'Premium reserved seat',
       'Dedicated locker',
       'Unlimited high-speed Wi-Fi',
       'Priority support',
-      'Flexible timings'
+      'Cost-effective savings'
     ]
   }
 ];

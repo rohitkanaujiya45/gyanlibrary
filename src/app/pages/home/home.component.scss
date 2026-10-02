@@ -242,6 +242,21 @@
     font-size: 1.1rem;
     margin-bottom: 30px;
   }
+  
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    
+    .btn {
+      padding: 12px 10px;
+      font-size: 0.95rem;
+      
+      &:last-child {
+        grid-column: 1 / -1; /* Make the third button span the full width */
+      }
+    }
+  }
 
   .availability-stats {
     flex-direction: column; /* Stack the stats on very small screens */
@@ -250,5 +265,9 @@
     .stat {
       width: 100%;
     }
+  }
+
+  .location-details {
+    padding: 25px 20px;
   }
 }

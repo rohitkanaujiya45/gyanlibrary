@@ -131,3 +131,29 @@ button {
   display: grid;
   gap: 2rem;
 }
+
+/* Global Mobile Responsiveness */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .container {
+    padding: 0 15px; /* slightly smaller padding on mobile to give more room */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}

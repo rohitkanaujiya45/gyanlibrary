@@ -142,7 +142,23 @@
   }
   
   .stats {
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .stat-box {
+    padding: 8px 10px;
+    flex: 1;
+    min-width: 30%;
+    
+    .stat-num {
+      font-size: 1.4rem;
+    }
+    
+    .stat-label {
+      font-size: 0.7rem;
+    }
   }
   
   .legend {
@@ -155,10 +171,11 @@
   .room-layout {
     display: flex;
     flex-direction: column;
+    padding: 20px 15px;
   }
   
   .aisle {
-    padding: 20px 0;
+    padding: 15px 0;
     margin: 10px 0;
   }
   

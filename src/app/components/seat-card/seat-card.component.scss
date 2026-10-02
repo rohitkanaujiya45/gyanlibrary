@@ -79,3 +79,24 @@
   
   opacity: 0.8;
 }
+
+@media (max-width: 600px) {
+  .seat {
+    padding: 4px;
+    border-radius: 6px;
+  }
+  
+  .seat-number {
+    font-size: 0.95rem;
+  }
+  
+  .seat-status-label {
+    font-size: 0.55rem;
+    margin-top: 3px;
+  }
+  
+  .seat-top {
+    height: 5px;
+    margin-bottom: 3px;
+  }
+}
