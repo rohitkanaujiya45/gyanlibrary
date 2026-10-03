@@ -2,7 +2,7 @@
   background-color: var(--primary-color);
   /* Uniform, slightly lighter overlay so the image is visible but text remains readable */
   // background-image: linear-gradient(rgba(26, 54, 93, 0.65), rgba(26, 54, 93, 0.65)), url('/assets/banner_3.jpg');
-    background-image: linear-gradient(rgba(26, 54, 93, 0.65), rgba(26, 54, 93, 0.65)), url('/assets/rudra1.png');
+  background-image: linear-gradient(rgba(26, 54, 93, 0.65), rgba(26, 54, 93, 0.65)), url('/assets/rudra1.png');
   background-size: cover;
   background-position: center 70px;
   background-attachment: fixed;
@@ -10,17 +10,19 @@
   min-height: 91vh;
   display: flex;
   align-items: center;
-  
+
   .hero-container {
     display: flex;
-    justify-content: center; /* Centered content is more balanced */
+    justify-content: center;
+    /* Centered content is more balanced */
     width: 100%;
   }
 }
 
 .hero-content {
   max-width: 800px;
-  text-align: center; /* Center aligned text */
+  text-align: center;
+  /* Center aligned text */
 }
 
 .hero-title {
@@ -39,7 +41,8 @@
 .hero-actions {
   display: flex;
   gap: 15px;
-  justify-content: center; /* Restore centered buttons */
+  justify-content: center;
+  /* Restore centered buttons */
   flex-wrap: wrap;
 }
 
@@ -180,12 +183,12 @@
     background-image: linear-gradient(rgba(26, 54, 93, 0.4), rgba(26, 54, 93, 0.8)), url('/assets/rudra1.png');
     padding: 100px 0 80px;
     min-height: 70vh;
-    
+
     .hero-container {
       justify-content: center;
     }
   }
-  
+
   .hero-content {
     margin: 0 auto;
     text-align: center;
@@ -199,28 +202,30 @@
   .hero-title {
     font-size: 3.2rem;
   }
-  
+
   .availability-card {
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px; /* Reduce padding on tablet */
-    gap: 20px; /* Ensure there is a gap when stacked vertically */
+    padding: 30px 20px;
+    /* Reduce padding on tablet */
+    gap: 20px;
+    /* Ensure there is a gap when stacked vertically */
   }
-  
+
   .availability-info {
     margin-bottom: 10px;
   }
-  
+
   .availability-stats {
     justify-content: center;
     width: 100%;
     margin-bottom: 10px;
   }
-  
+
   .location-card {
     grid-template-columns: 1fr;
   }
-  
+
   .location-visual {
     height: 300px;
     min-height: 300px;
@@ -231,38 +236,40 @@
   .hero-section {
     background-image: linear-gradient(rgba(26, 54, 93, 0.6), rgba(26, 54, 93, 0.9)), url('/assets/rudra1.png');
     padding: 80px 0 60px;
-    min-height: 60vh;
+    min-height: 90vh;
   }
-  
+
   .hero-title {
     font-size: 2.2rem;
     margin-bottom: 15px;
   }
-  
+
   .hero-subtitle {
     font-size: 1.1rem;
     margin-bottom: 30px;
   }
-  
+
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    
+
     .btn {
       padding: 12px 10px;
       font-size: 0.95rem;
-      
+
       &:last-child {
-        grid-column: 1 / -1; /* Make the third button span the full width */
+        grid-column: 1 / -1;
+        /* Make the third button span the full width */
       }
     }
   }
 
   .availability-stats {
-    flex-direction: column; /* Stack the stats on very small screens */
+    flex-direction: column;
+    /* Stack the stats on very small screens */
     gap: 15px;
-    
+
     .stat {
       width: 100%;
     }
