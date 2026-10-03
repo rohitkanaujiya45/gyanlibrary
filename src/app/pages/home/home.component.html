@@ -1,10 +1,12 @@
 <!-- Hero Section -->
-<div class="hero-section">
+<!-- Old Design (Default) -->
+<div class="hero-section old-design" *ngIf="!showNewDesign">
   <div class="container hero-container">
     <div class="hero-content">
-      <h1 class="hero-title">A Better Place to Study.</h1>
-      <p class="hero-subtitle">A peaceful, comfortable and focused study space designed for students who want to achieve more.</p>
-      
+      <h1 class="hero-title" (click)="onSecretClick()" style="cursor: pointer;">A Better Place to Study.</h1>
+      <p class="hero-subtitle">A peaceful, comfortable and focused study space designed for students who want to achieve
+        more.</p>
+
       <div class="hero-actions">
         <a routerLink="/seats" class="btn btn-primary">View Seats</a>
         <a routerLink="/facilities" class="btn btn-secondary">Explore Facilities</a>
@@ -14,16 +16,89 @@
   </div>
 </div>
 
+<!-- New Design (Secret) -->
+<div class="hero-section new-design" *ngIf="showNewDesign">
+  <!-- Decorative Shapes -->
+  <div class="shape shape-top-left"></div>
+  <div class="shape shape-bottom-left"></div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="material-icons">school</span> Learn &bull; Practice &bull; Grow
+      </div>
+      <h1 class="hero-title" (click)="onSecretClick()">
+        A Better Place to <br>
+        <span class="highlight">Study.</span>
+      </h1>
+      <p class="hero-subtitle">A peaceful, comfortable and focused study space<br>designed for students who want to achieve more.</p>
+
+      <div class="hero-actions">
+        <a routerLink="/seats" class="btn btn-primary hero-btn">View Seats <span class="material-icons">arrow_forward</span></a>
+        <a routerLink="/facilities" class="btn btn-outline hero-btn"><span class="material-icons">domain</span> Explore Facilities</a>
+        <a routerLink="/contact" class="btn btn-accent hero-btn">Enquire Now <span class="material-icons">arrow_forward</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Strip -->
+<div class="features-strip">
+  <div class="container features-container">
+    
+    <div class="feature-item">
+      <div class="feature-icon bg-purple">
+        <span class="material-icons text-purple">menu_book</span>
+      </div>
+      <div class="feature-text">
+        <h4>Peaceful Environment</h4>
+        <p>Study without distractions</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon bg-yellow">
+        <span class="material-icons text-yellow">groups</span>
+      </div>
+      <div class="feature-text">
+        <h4>Comfortable Seating</h4>
+        <p>Designed for long hours</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon bg-green">
+        <span class="material-icons text-green">wifi</span>
+      </div>
+      <div class="feature-text">
+        <h4>High-Speed Wi-Fi</h4>
+        <p>Stay connected, always</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon bg-purple">
+        <span class="material-icons text-purple">lock</span>
+      </div>
+      <div class="feature-text">
+        <h4>Safe & Secure</h4>
+        <p>Your focus, our priority</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- Why Choose Us / Quick Facilities -->
 <div class="section bg-light">
   <div class="container">
     <h2 class="section-title">Why Choose {{ libraryInfo.name }}</h2>
     <p class="section-subtitle">We provide the perfect environment so you can focus entirely on your goals.</p>
-    
+
     <div class="grid preview-grid">
       <app-facility-card *ngFor="let facility of facilitiesPreview" [facility]="facility"></app-facility-card>
     </div>
-    
+
     <div class="text-center mt-4">
       <a routerLink="/facilities" class="btn btn-secondary">View All Facilities</a>
     </div>
@@ -38,7 +113,7 @@
         <h2>Check Seat Availability</h2>
         <p>Planning to drop by? Check our current seating status in real-time.</p>
       </div>
-      
+
       <div class="availability-stats">
         <div class="stat available">
           <span class="num">{{ availableSeats }}</span>
@@ -49,7 +124,7 @@
           <span class="label">Occupied</span>
         </div>
       </div>
-      
+
       <div class="availability-action">
         <a routerLink="/seats" class="btn btn-primary">View Full Layout</a>
       </div>
@@ -62,11 +137,11 @@
   <div class="container">
     <h2 class="section-title">Membership Plans</h2>
     <p class="section-subtitle">Flexible plans to suit your study routine.</p>
-    
+
     <div class="grid preview-grid">
       <app-plan-card *ngFor="let plan of plansPreview" [plan]="plan"></app-plan-card>
     </div>
-    
+
     <div class="text-center mt-4">
       <a routerLink="/plans" class="btn btn-secondary">View All Plans</a>
     </div>
@@ -102,16 +177,10 @@
         </ul>
         <a [href]="libraryInfo.mapUrl" target="_blank" class="btn btn-primary mt-3">Get Directions</a>
       </div>
-      
+
       <div class="location-visual">
-        <iframe 
-          src="https://maps.google.com/maps?q=26.5694667,82.3980967&z=17&hl=en&output=embed" 
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
+        <iframe src="https://maps.google.com/maps?q=26.5694667,82.3980967&z=17&hl=en&output=embed" width="100%"
+          height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </div>

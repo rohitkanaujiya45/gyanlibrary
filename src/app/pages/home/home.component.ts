@@ -18,17 +18,27 @@ import { libraryInfo } from '../../data/library-info';
 })
 export class HomeComponent implements OnInit {
   libraryInfo = libraryInfo;
-  
-  // Previews
+
   facilitiesPreview = facilities.slice(0, 3);
   plansPreview = plans.slice(0, 3);
-  
+
   // Seat Stats
   availableSeats = 0;
   occupiedSeats = 0;
-  
+
+  // Secret egg variables
+  secretClickCount = 0;
+  showNewDesign = false;
+
   ngOnInit(): void {
     this.availableSeats = seats.filter(s => s.status === 'available').length;
     this.occupiedSeats = seats.filter(s => s.status === 'occupied').length;
+  }
+
+  onSecretClick() {
+    this.secretClickCount++;
+    if (this.secretClickCount >= 11) {
+      this.showNewDesign = true;
+    }
   }
 }

@@ -39,9 +39,10 @@
   transition: var(--transition-fast);
   position: relative;
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     color: var(--primary-color);
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -58,7 +59,7 @@
 .hamburger {
   display: none;
   cursor: pointer;
-  
+
   .bar {
     display: block;
     width: 25px;
@@ -72,9 +73,18 @@
 @media (max-width: 768px) {
   .hamburger {
     display: block;
-    &.active .bar:nth-child(2) { opacity: 0; }
-    &.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    &.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    &.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
   }
 
   .nav-menu {
@@ -89,16 +99,16 @@
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     padding: 2rem 0;
     gap: 1.5rem;
-    
+
     &.active {
       left: 0;
     }
   }
-  
+
   .nav-item {
     margin: 1.5rem 0;
   }
-  
+
   .cta-item {
     margin-top: 1rem;
   }
