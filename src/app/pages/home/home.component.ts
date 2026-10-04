@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
 
   onSecretClick() {
     this.secretClickCount++;
-    if (this.secretClickCount >= 11) {
+    if (this.secretClickCount >= 4) {
       this.showNewDesign = true;
     }
   }
